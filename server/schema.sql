@@ -11,13 +11,10 @@ CREATE TABLE messages (
 
 /* Create other tables and define schemas for them here! */
 
--- CREATE TABLE user (
+CREATE TABLE user (
 
--- );
+);
 
--- CREATE TABLE roomname(
-
--- );
 
 
 
