@@ -2,7 +2,7 @@
 var http = require("http");
 
 var messages = require('./request-handler.js');
-// var utils = require('./utils.solution');
+var utils = require('./utils.js');
 var url = require('url');
 
 // Every server needs to listen on a port with a unique number. The

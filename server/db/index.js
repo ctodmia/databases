@@ -16,9 +16,9 @@ con.query('SELECT * FROM messages', function(err, rows, fields){
   if(err) {
     throw err;
   }
-  console.log('The solution is:', rows[1]);
+  console.log('The solution is:', rows);
 })
 
 
-
 con.end();
+exports.con = con;

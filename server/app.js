@@ -1,9 +1,11 @@
 var express = require('express');
 var db = require('./db');
-var http = require('http')
+var http = require('http');
 // var messages = require('./request-handler.js');
-// var utils = require('./utils.solution');
+// var utils = require('./utils.js');
 var url = require('url');
+// var Backbone = require('./bower_components/backbone/backbone.js')
+// var jQuery = require('jqery');
 // var basic = require('./basic-server.js')
 
 // Middleware
