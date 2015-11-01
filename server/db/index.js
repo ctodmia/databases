@@ -12,13 +12,13 @@ var con = mysql.createConnection({
 });
 
 con.connect();
-con.query('SELECT * FROM messages', function(err, rows, fields){
-  if(err) {
-    throw err;
-  }
-  console.log('The solution is:', rows);
-})
+// con.query('SELECT * FROM messages', function(err, rows, fields){
+//   if(err) {
+//     throw err;
+//   }
+//   console.log('The solution is:', rows);
+// })
 
 
-con.end();
 exports.con = con;
+// con.end();

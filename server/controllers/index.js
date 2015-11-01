@@ -5,26 +5,40 @@ var bluebird = require('bluebird');
 
 module.exports = {
   messages: {
-    get: function (req, res) {}, // a function which handles a get request for all messages
-    post: function (req, res) {} // a function which handles posting a message to the database
-    //if(req the method is post ){
-      //create an empty string that will compress your incoming 
-      //if there is a data event being emitted. 
-        //then create an em
-      
-
-      //res.on('data', function(chunk){
-        // results = ''
-        // results +=chunk;
-        //models.messages.post(results)
-    //   })
-    // }
+    get: function (req, res) {
+      // console.log(req);
+      models.messages.get(function(err, results){
+        //TODO: handle err
+        res.json(results);
+      });
+    }, // a function which handles a get request for all messages
+    post: function (req, res) {
+        // var params = [req.body['text'], req.body['username'], req.body['roomname']];
+        console.log('request', req.body);
+        models.messages.post(req.body, function(err, results){
+        //TODO: handle err
+        //params must be an array. wer are getting the results in the body. 
+        res.json(results);
+      });
+   
+    }
   },
 
   users: {
     // Ditto as above
-    get: function (req, res) {},
-    post: function (req, res) {}
+    get: function (req, res) {
+        models.users.get(function(err, results){
+        //TODO: handle err
+        res.json(results);
+      });
+    },
+    post: function (req, res) {
+          // var params = req.body[username];
+        models.users.post(params, function(err, results){
+        //TODO: handle err
+        //params must be an array. wer are getting the results in the body. 
+        res.json(results)
+      });
+    }
   }
 };
-
