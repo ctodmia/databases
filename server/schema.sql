@@ -2,29 +2,36 @@ CREATE DATABASE chat;
 
 USE chat;
 
-CREATE TABLE `Messages` (
-  `id` INTEGER NOT NULL AUTO_INCREMENT,
-  `username_id` INTEGER NOT NULL,
-  `text` VARCHAR NOT NULL,
-  `roomname` INTEGER NOT NULL,
-  PRIMARY KEY (`id`)
+CREATE TABLE messages (
+   /* Describe your table here.*/
+   username VARCHAR(100),
+   message VARCHAR(100),
+   roomname VARCHAR (100)
 );
 
--- ---
--- Table 'Users'
--- 
--- ---
+-- CREATE TABLE `Messages` (
+--   `id` INTEGER NOT NULL AUTO_INCREMENT,
+--   `username_id` INTEGER NOT NULL,
+--   `text` VARCHAR NOT NULL,
+--   `roomname` INTEGER NOT NULL,
+--   PRIMARY KEY (`id`)
+-- );
 
-DROP TABLE IF EXISTS `Users`;
+-- -- ---
+-- -- Table 'Users'
+-- -- 
+-- -- ---
+
+-- DROP TABLE IF EXISTS `Users`;
     
-CREATE TABLE `Users` (
-  `id` INTEGER NOT NULL AUTO_INCREMENT,
-  `username` VARCHAR NOT NULL,
-  PRIMARY KEY (`id`)
-);
+-- CREATE TABLE `Users` (
+--   `id` INTEGER NOT NULL AUTO_INCREMENT,
+--   `username` VARCHAR NOT NULL,
+--   PRIMARY KEY (`id`)
+-- );
 
--- ---
--- Table 'Rooms'
+-- -- ---
+-- -- Table 'Rooms'
 -- 
 -- ---
 
